@@ -14,10 +14,10 @@ public class ComissionStrategy implements SalaryStrategy {
 	}
 
 	public double calculateSalary() {
-		return salary + calcCommission();
+		return salary + calculateCommission();
 	}
 
-	private Double calcCommission() {
+	private double calculateCommission() {
 		if (amountSold > MIN_TO_RECEIVE_COMMISSION) {
 			return amountSold * COMMISSION_PERCENTAGE;
 		}
